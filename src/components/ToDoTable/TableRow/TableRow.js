@@ -13,7 +13,6 @@ const TableRow = ({id, title}) => {
       method: 'DELETE',
     }).then(response => response.json()).then(result => result.success && dispatch(setListIsChanged()));
   };
-
   const editHandler = () => {
     dispatch(editTask(id, title));
   };

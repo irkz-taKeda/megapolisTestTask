@@ -4,8 +4,6 @@ import TableRow from "./TableRow/TableRow";
 import {useDispatch, useSelector} from "react-redux";
 import {saveToDoList} from "../../redux/actions/todos";
 
-
-
 const ToDoTable = ({listIsChanged}) => {
   const {list} = useSelector(state => state.toDo);
   const dispatch = useDispatch();
@@ -23,16 +21,13 @@ const ToDoTable = ({listIsChanged}) => {
   useEffect(getToDoList, [listIsChanged]);
 
   return (
-      <>
-        {list.length > 0 ?
+        list.length > 0 ?
             <table className={styles.toDoTable_container}>
               <tbody>
               {list.map((item, index) => <TableRow key={index} list={list} id={item.id} title={item.title}/>)}
               </tbody>
             </table>
             : <div className={styles.toDoTable_isEmpty}>Список пуст</div>
-        }
-      </>
   );
 };
 

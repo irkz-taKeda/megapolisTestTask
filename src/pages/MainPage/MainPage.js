@@ -7,7 +7,6 @@ import {useSelector} from "react-redux";
 
 const MainPage = () => {
   const {modalIsOpen, listIsChanged} = useSelector(state => state.toDo);
-
   return(
       <>
         <div className={styles.container}>
@@ -16,7 +15,6 @@ const MainPage = () => {
         </div>
         {modalIsOpen && <Modal/>}
       </>
-
   )
 };
 export default MainPage;
