@@ -1,13 +1,17 @@
-.submitButton {
+.button {
     font-family: 'Roboto', sans-serif;
-    width: 148px;
+    min-width: 148px;
     line-height: 36px;
     font-size: 14px;
     text-align: center;
-    border: 1px solid #39B54A;
+    border: 1px solid;
     border-radius: 4px;
     cursor: pointer;
     outline: none;
+}
+
+.submitButton {
+    border-color: #39B54A;
 }
 
 .submitButton:hover {
@@ -16,15 +20,7 @@
 }
 
 .returnButton {
-    font-family: 'Roboto', sans-serif;
-    width: 148px;
-    line-height: 36px;
-    font-size: 14px;
-    text-align: center;
-    border: 1px solid #0071BC;
-    border-radius: 4px;
-    cursor: pointer;
-    outline: none;
+    border-color: #0071BC;
 }
 
 .returnButton:hover {
@@ -33,15 +29,7 @@
 }
 
 .deleteButton {
-    font-family: 'Roboto', sans-serif;
-    width: 148px;
-    line-height: 36px;
-    font-size: 14px;
-    text-align: center;
-    border: 1px solid #FF0000;
-    border-radius: 4px;
-    cursor: pointer;
-    outline: none;
+    border-color: #F00;
 }
 
 .deleteButton:hover {

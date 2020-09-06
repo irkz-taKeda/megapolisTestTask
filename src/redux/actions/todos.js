@@ -10,13 +10,15 @@ export const setModalIsOpen = value => ({
   value
 });
 
-export const setListIsChanged = () => ({
-  type: constants.LIST_IS_CHANGED
+export const deleteTask = (id) => ({
+  type: constants.DELETE_TASK,
+  id
 });
 
-export const deleteTask = (list) => ({
-  type: constants.DELETE_TASK,
-  list
+export const saveTask = (id, title) => ({
+  type: constants.SAVE_TASK,
+  id,
+  title
 });
 
 export const editTask = (id, title) => ({
@@ -24,5 +26,13 @@ export const editTask = (id, title) => ({
   id,
   title
 });
+
+export const addTask = (id, title) => ({
+  type: constants.ADD_TASK,
+  id,
+  title
+});
+
+
 
 

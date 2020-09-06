@@ -1,23 +1,10 @@
 import React from "react";
 import styles from './Button.module.css'
 
-const Button = ({handleClick,value}) => {
-  const setClassName = value => {
-    switch(value) {
-      case 'Добавить':
-        return styles.submitButton;
-      case 'Вернуться в список':
-        return styles.returnButton;
-      case 'Удалить':
-        return styles.deleteButton;
-      default:
-        return styles.submitButton;
-    }
-  };
-
+const Button = ({theme, onClick, children}) => {
   return (
-      <button onClick={handleClick} className={setClassName(value)}>
-        {value}
+      <button onClick={onClick} className={`${styles.button} ${styles[theme]||styles.submitButton}`}>
+        {children}
       </button>
   );
 };

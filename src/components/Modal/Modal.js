@@ -3,7 +3,7 @@ import styles from './Modal.module.css';
 import Button from "../Button/Button";
 import cross from '../../assets/svg/cross.svg';
 import {useDispatch} from "react-redux";
-import {setListIsChanged, setModalIsOpen} from "../../redux/actions/todos";
+import {addTask, setModalIsOpen} from "../../redux/actions/todos";
 
 const Modal = () => {
   const [title, setDescription] = useState('');
@@ -26,9 +26,11 @@ const Modal = () => {
           'Content-Type': 'application/json;charset=utf-8'
         },
         body: JSON.stringify({title: title})
-      });
+      })
+          .then(response => response.json())
+          .then(result => dispatch(addTask(result.id, title)))
+          .catch(() => alert('Shit happened'));
       closeHandler();
-      dispatch(setListIsChanged(true));
     }
   };
 
@@ -44,7 +46,7 @@ const Modal = () => {
             <div className={styles.modal_body}>
               <input ref = {inputValue} onChange={e => setDescription(e.target.value)} className={styles.modal_body_input} type="text"/>
               <div className={styles.modal_isEmpty_error}>{modalIsEmpty&&"Заголовок не может быть пустым"}</div>
-              <div className={styles.modal_submit_btn} ><Button handleClick={submitHandler}  value={"Создать"}/></div>
+              <div className={styles.modal_submit_btn} ><Button onClick={submitHandler}>Создать</Button></div>
             </div>
           </div>
         </div>

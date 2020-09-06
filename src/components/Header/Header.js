@@ -15,7 +15,7 @@ const Header = () => {
         <div className={styles.headerTitle}>
           Список задач
         </div>
-        <Button handleClick={submitHandle} value={'Добавить'}/>
+        <Button onClick={submitHandle}>Добавить</Button>
       </div>
   );
 };

@@ -1,15 +1,19 @@
 import React, {useState} from "react";
 import styles from './ShowToDo.module.css';
 import Button from "../../components/Button/Button";
-import {Link} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {setListIsChanged} from "../../redux/actions/todos";
+import {deleteTask, saveTask} from "../../redux/actions/todos";
 
 const ShowToDo = () => {
   const {id, title} = useSelector(state => state.toDo.editTask);
-  const [inputIsChanging, setInputIsChanging] = useState(false);
-  const [newTitle, setNewTitle] = useState('');
+  const [newTitle, setNewTitle] = useState(title);
+  const inputIsChanged = Boolean(newTitle) && newTitle !== title;
   const dispatch = useDispatch();
+  const history = useHistory();
+  const goHome = () => {
+    history.push('/');
+  };
   const editHandler = () => {
     fetch(`https://test.megapolis-it.ru/api/list/${id}`, {
       method: 'POST',
@@ -17,15 +21,23 @@ const ShowToDo = () => {
         'Content-Type': 'application/json;charset=utf-8'
       },
       body: JSON.stringify({title: newTitle})
-    }).then(response => (response.status === 200) && dispatch(setListIsChanged()));
+    })
+        .then(response => {
+      if (response.status === 200) {
+        dispatch(saveTask(id, newTitle));
+        goHome();
+      }
+    })
+        .catch(() => alert('Shit happened'));
   };
   const deleteHandler = id => {
     fetch(`https://test.megapolis-it.ru/api/list/${id}`, {
       method: 'DELETE',
-    }).then(response => response.json()).then(result => result.success && dispatch(setListIsChanged()));
+    })
+        .then(response => response.json()).then(result => result.success && dispatch(deleteTask(id)))
+        .catch(() => alert('Shit happened'));
   };
   const changeHandler = (e) => {
-    setInputIsChanging(true);
     setNewTitle(e.target.value);
   };
   return(
@@ -34,15 +46,13 @@ const ShowToDo = () => {
           <div className={styles.showToDo_header_title}>
             Задача №{id}
           </div>
-          <Link to={'/'}>
-            <Button handleClick={() => deleteHandler(id)}  value={"Удалить"}/>
-          </Link>
+          <span><Button onClick={() => deleteHandler(id)} theme={'deleteButton'} >Удалить</Button></span>
         </div>
         <div className={styles.showToDo_input_title}>
           Краткое описание
         </div>
-        <input className={styles.showToDo_input} type="text" onChange={(e) => changeHandler(e)}  defaultValue={title}/>
-        <Link to='./' className={styles.link}><Button handleClick={editHandler} value={inputIsChanging ? "Сохранить" : "Вернуться в список"}/></Link>
+        <input className={styles.showToDo_input} type="text" onChange={(e) => changeHandler(e)}  value={newTitle}/>
+        <span><Button onClick={() => inputIsChanged ? editHandler() : goHome()} theme={inputIsChanged ?'submitButton' : 'returnButton'}>{inputIsChanged ? "Сохранить" : "Вернуться в список"}</Button></span>
       </div>
   );
 };

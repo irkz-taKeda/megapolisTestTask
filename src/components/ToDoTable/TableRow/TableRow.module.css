@@ -2,6 +2,7 @@
     font-family: 'Tahoma', sans-serif;
     font-size: 14px;
     width: 1156px;
+    word-break: break-word;
 }
 
 .tableRow_task_title,

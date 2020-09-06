@@ -2,17 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae0894ac-9e42-4934-96b0-6ed2e1eb4a03" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/Modal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ToDoTable/TableRow/TableRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoTable/TableRow/TableRow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToDoTable/TableRow/TableRow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoTable/TableRow/TableRow.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ToDoTable/ToDoTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoTable/ToDoTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/ShowToDo/ShowToDo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ShowToDo/ShowToDo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ShowToDo/ShowToDo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ShowToDo/ShowToDo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/todos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/todos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/toDo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/toDo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +104,7 @@
       <workItem from="1599235128510" duration="24612000" />
       <workItem from="1599302829179" duration="2793000" />
       <workItem from="1599316754228" duration="18951000" />
-      <workItem from="1599408583862" duration="14642000" />
+      <workItem from="1599408583862" duration="19355000" />
     </task>
     <servers />
   </component>
