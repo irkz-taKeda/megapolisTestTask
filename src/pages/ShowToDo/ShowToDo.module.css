@@ -1,0 +1,42 @@
+.showToDo_container {
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto, sans-serif;
+    margin: 20px 64px;
+}
+
+.showToDo_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.showToDo_header_title {
+    font-size: 32px;
+    line-height: 37px;
+    margin-bottom: 22px;
+    font-weight: bold;
+}
+
+.showToDo_input_title {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 16px;
+    color: #4D4D4D;
+}
+
+.showToDo_input {
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    outline: none;
+    margin-bottom: 34px;
+}
+
+.link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.link:focus {
+
+}

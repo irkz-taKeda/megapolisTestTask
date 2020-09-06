@@ -1,0 +1,11 @@
+.toDoTable_container {
+    border: 1px solid #E6E6E6;
+    border-collapse: collapse;
+    margin: 20px 64px;
+}
+
+.toDoTable_isEmpty {
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+    text-align: center;
+}

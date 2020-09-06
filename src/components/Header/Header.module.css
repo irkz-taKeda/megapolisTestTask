@@ -1,0 +1,17 @@
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 64px;
+    transition: all ease-in 1500ms;
+}
+
+.headerTitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.button:focus {
+    color: #fff;
+    background-color: #39B54A;
+}
